@@ -49,17 +49,19 @@ namespace SimpleAPI.Formatters
             var response = context.HttpContext.Response;
             StringBuilder buffer = new StringBuilder();
 
+
+            buffer.Append("<XMLDocument>" + Environment.NewLine);
             foreach (var item in (IEnumerable)context.Object)
             {
                 var xml = ObjectToXML(item, null, null).OuterXml;
                 buffer.Append(xml.ToString() + Environment.NewLine);
             }
-
+            buffer.Append("</XMLDocument>" + Environment.NewLine);
             await response.WriteAsync(buffer.ToString());
         }
         #endregion
 
-        private static XmlDocument ObjectToXML(object obj, XmlDocument xmlDocument, XmlNode rootNode)
+        private XmlDocument ObjectToXML(object obj, XmlDocument xmlDocument, XmlNode rootNode)
         {
 
             if (xmlDocument == null)
