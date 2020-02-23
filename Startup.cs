@@ -62,13 +62,10 @@ namespace SimpleAPI
 
             var optionsBuilder = new DbContextOptionsBuilder<DP_MainContext>();
             optionsBuilder.UseSqlServer(Configuration.GetConnectionString("DefaultDatabase"));
-            //List<string> keys = new List<string>();
             using (var _context = new DP_MainContext(optionsBuilder.Options))
             {
-                //keys = _context.Stm_Api_Clients.Select(s => s.Api_Key).ToList();
                 new AKeys(_context.Stm_Api_Clients.Select(s => s.Api_Key).ToList());
             }
-            //AKeys ak = new AKeys(keys);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
