@@ -12,7 +12,7 @@ namespace SimpleAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [AppAutentificatinFilter]
+    [AppAutentificationFilter]
     public class PartnersController : ControllerBase
     {
         private readonly IPartnersService _partnersService;

@@ -13,7 +13,7 @@ namespace SimpleAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [AppAutentificatinFilter]
+    [AppAutentificationFilter]
     public class BasesController : ControllerBase
     {
         private readonly IDtBasesService _dtBasesService;

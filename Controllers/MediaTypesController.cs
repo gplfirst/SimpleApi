@@ -12,7 +12,7 @@ namespace SimpleAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [AppAutentificatinFilter]
+    [AppAutentificationFilter]
     public class MediaTypesController : ControllerBase
     {
         private readonly IRefMediaTypesService _refMediaTypesService;

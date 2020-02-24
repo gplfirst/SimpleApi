@@ -12,7 +12,7 @@ namespace SimpleAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [AppAutentificatinFilter]
+    [AppAutentificationFilter]
     public class ClientsController : ControllerBase
     {
         private readonly IStmApiClientsService _clientsService;

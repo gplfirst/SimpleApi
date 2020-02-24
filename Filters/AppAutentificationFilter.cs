@@ -8,7 +8,7 @@ using SimpleAPI.Repositories;
 
 namespace SimpleAPI.Filters
 {
-    public class AppAutentificatinFilter : Attribute, IActionFilter
+    public class AppAutentificationFilter : Attribute, IActionFilter
     {
         public void OnActionExecuting(ActionExecutingContext context)
         {
